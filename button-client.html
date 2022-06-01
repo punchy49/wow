@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>JobsAndGo</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="card">
+      <h1 class="h1">JobsAndGo</h1>
+      <div class="title">
+        <h1>Create your Account</h1>
+      </div>
+      <div class="sign-up">
+        <form>
+          <input type="text" id="fname" placeholder="First Name" />
+          <input type="text" id="lname" placeholder="Last Name" />
+          <input type="text" id="email" placeholder="Email" />
+          <input type="password" id="pass" placeholder="Password" />
+          <input type="password" id="confPass" placeholder="Confirm Password" />
+          <br />
+          <button class="btnSubmit" onclick="createAcc()">
+            Create Account
+          </button>
+        </form>
+      </div>
+      <div class="accounts">
+        <h4>Accounts:</h4>
+        <br />
+        <h5>If you already have an account upload your CV below</h5>
+        <div
+          data-plane-upload="bXJnVHBIcCtjanVqVFhoY3pvWmpFb2ZRRkFNMTBBbS9BNUtRTVMxN3V1WGY0OGVBcnNJdzBHZEt4UFBnV3c2MzdLTWRjcnZPaTlZamVTZ1VDblRacEFtY2s3T3NnclBuV050cGRPZTRyYW1tUitrYTdxeHUwSWQ2Zm4vaVRrMkIvWlFNL2Y3ZEh0b0Myd1R3bnk5bWxRPT0="
+        ></div>
+      </div>
+    </div>
+    <!-- planeupload.com button code start -->
+
+    <script type="text/javascript">
+      (function (w, d) {
+        var n = "PlaneUpload";
+        w[n] ||
+          (function () {
+            w[n] = {};
+            var s = d.createElement("script");
+            s.type = "text/javascript";
+            s.async = true;
+            s.src =
+              "https://app.planeupload.com/assets/connector.js?t=" +
+              new Date().getTime();
+            d.getElementsByTagName("head")[0].appendChild(s);
+            s.onload = function () {
+              w[n].init();
+            };
+          })();
+      })(window, document);
+      function createAcc() {
+        let fname, lname, email, pass, confPass;
+        fname = document.getElementById("fname").value;
+        lname = document.getElementById("lname").value;
+        email = document.getElementById("email").value;
+        pass = document.getElementById("pass").value;
+        confPass = document.getElementById("confPass").value;
+
+        if (pass != confPass) {
+          window.alert("Passwords don't match!");
+        } else {
+          window.alert("Llogaria u krijua!");
+          localStorage.setItem("result", result);
+          localStorage.setItem("accounts", i + 1);
+        }
+      } //end
+    </script>
+    <!-- planeupload.com button code end -->
+  </body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PlaneUpload button</title>
+</head>
+<body>
+<h3>Uploaded file <%= file.fileName %></h3>
+<a target="_blank"
+   href="<%= file.downloadUrl %>">
+    <% if (null != file.thumb) { %>
+    <img style="max-height: 20px" src="<%= file.thumb %>"/>
+    <% } %>
+    Download
+</a>
+</body>
+</html>
