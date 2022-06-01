@@ -1,0 +1,63 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: none;
+  list-style: none;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  margin-top: 10%;
+  height: 70vh;
+  font-family: Arial;
+}
+
+.card {
+  flex-direction: column;
+  width: 60%;
+  height: fit-content;
+  text-align: center;
+  border: 1px solid lightgray;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+  padding: 5em 3em;
+}
+
+.title {
+  font-size: 1em;
+}
+
+.sign-up {
+  margin: 2em auto 2em auto;
+  width: 100%;
+}
+
+.sign-up input {
+  padding: 0.8em 1em;
+  margin: 1em 0.5em;
+  border: 1px solid lightgray;
+}
+
+.sign-up #email {
+  width: 85%;
+}
+
+.sign-up .btnSubmit {
+  font-size: 1em;
+  display: inline-block;
+  width: 45%;
+  margin: 2em 0 0 auto;
+  padding: 1em 2em;
+  font-weight: bold;
+  background-color: rgb(0, 140, 255);
+  color: white;
+  border: 1px solid rgb(0, 140, 255);
+}
+
+.h1 {
+  border: 1px solid rgb(0, 140, 255);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+}

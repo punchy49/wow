@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PlaneUpload attachment example </title>
+</head>
+<body>
+<h1>Form result <%= example %></h1>
+
+<p>Your files location:</p>
+<h3><span class="label"><%= button.provider.title %></span>/<%= button.providerPath%></h3>
+
+
+
+
+<table>
+
+    <tr>
+        <td>
+
+        </td>
+        <td>
+            <b>Client side</b>
+        </td>
+        <td>
+            <b>Admin side</b>
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            Preview
+
+        </td>
+        <td style="width: 40%">
+            <%- Buffer.from(button.installationCode64,"base64") %>
+        </td>
+        <td style="width: 40%">
+            <%- Buffer.from(button.installationCode64Admin,"base64") %>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Files
+        </td>
+        <td>
+            <ul>
+                <% files.forEach(file => {%>
+                <li>
+                    <a target="_blank"
+                       href="<%= file.downloadUrl %>">
+                        <% if (null != file.thumb) { %>
+                        <img style="max-height: 20px" src="<%= file.thumb %>"/>
+                        <% } %>
+                        <%= file.fileName %>
+                    </a>
+                </li>
+                <% }); %>
+            </ul>
+
+
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Installation code
+        </td>
+        <td>
+            Get code from <a target="_blank" href="<%= button.installationCodeUrl %>">link</a>
+
+        </td>
+        <td>
+            Get code from <a target="_blank" href="<%= button.installationCodeUrlAdmin %>">
+            link
+        </a>
+
+        </td>
+    </tr>
+
+</table>
+<style>
+    body {
+        text-align: center;
+    }
+
+    iframe {
+        width: 100%;
+    }
+
+    .label {
+        display: inline-block;
+        padding: 4px;
+        color: white;
+        background: #448AFF;
+        border-radius: 4px;
+    }
+
+    table {
+        width: 100%;
+    }
+
+    table td {
+        text-align: center;
+        padding: 15px;
+
+    }
+    ul li {
+        text-align: left;
+
+    }
+    ul li a {
+        display: block;
+        padding: 10px;
+    }
+    ul li a img {
+        padding: 2px;
+        border: 1px solid rgba(155,155,155,0.3);
+    }
+</style>
+
+</body>
+</html>

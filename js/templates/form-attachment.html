@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PlaneUpload attachment example</title>
+</head>
+<body>
+<form action="/submit" method="post" style="max-width: 350px;">
+    <fieldset>
+        <legend>
+            Your name
+        </legend>
+        <input type="text" name="example" />
+    </fieldset>
+    <fieldset>
+        <legend>Attach some files</legend>
+        <!-- code below is copied from the "Custom form (attachment mode)" tab from the install settings in the button -->
+        <!-- planeupload.com button code start -->
+<div data-plane-upload="bXJnVHBIcCtjanVqVFhoY3pvWmpFb2ZRRkFNMTBBbS9BNUtRTVMxN3V1WGY0OGVBcnNJdzBHZEt4UFBnV3c2M1RnRHl0T1ZleXE1MzJuSysvZTQycWJQcHlWdEdlRTJqK2J0UnF2VlQwN3hyaUNkK3BsekdIMDh5YmdqeHg5T0xJQlFBZVlFTWRxWjJVaXhlcHZwbGhYTFU3MzBSVzFOZjJXOVl5N1Z6VUhZPQ=="></div>
+<script type="text/javascript">
+    (function(w,d) {
+        var n="PlaneUpload";w[n]||(function(){
+            w[n] = {};var s = d.createElement('script');s.type='text/javascript';s.async=true;
+            s.src='https://app.planeupload.com/assets/connector.js?t='+new Date().getTime();
+            d.getElementsByTagName("head")[0].appendChild(s);
+            s.onload = function() {
+                w[n].init();
+            };
+        })();
+    })(window,document);
+</script>
+<!-- planeupload.com button code end -->
+    </fieldset>
+    <input type="submit" />
+</form>
+</body>
+</html>

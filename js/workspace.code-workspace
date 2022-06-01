@@ -1,0 +1,16 @@
+{
+  "folders": [
+	{
+		"path": "..\\..\\uploadproject2"
+	},
+	{
+		"path": "."
+	},
+	{
+		"path": "..\\..\\vs javascript\\Alex Mima\\css"
+	}
+],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "js"
+  }
+}
